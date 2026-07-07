@@ -1,5 +1,6 @@
 try:
     number = int(input("Enter a Number: "))
+
     if number <= 0:
         print("Number must be more than zero.")
     elif number == 1:
