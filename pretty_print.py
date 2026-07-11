@@ -1,32 +1,24 @@
 import time
 
 start = time.perf_counter()
-alphabets = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alphabets = "abcdefghijklmnopqrstuvwxyz"
 digits = "0123456789"
 specials = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+words = ""
 
 phrase = input("Enter a phrase (ex. Hello, World!): ")
 
-words = ""
 for word in phrase:
     if word in alphabets:
-        for char in alphabets:
-            if char == word:
-                words += char
-                break
-            else:
-                print(words + char)
-            time.sleep(.1)
+        charset = alphabets
+    elif word in alphabets.upper():
+        charset = alphabets.upper()
     elif word in digits:
-        for char in digits:
-            if char == word:
-                words += char
-                break
-            else:
-                print(words + char)
-            time.sleep(.1)
+        charset = digits
     elif word in specials:
-        for char in specials:
+        charset = specials
+
+    for char in charset:
             if char == word:
                 words += char
                 break
@@ -35,4 +27,4 @@ for word in phrase:
             time.sleep(.1)
 else:
     end = time.perf_counter()
-    print(f"\nPretty Print: {words}\n{end - start:.2f} seconds.")
+    print(f"\n{words}\n{end - start:.2f} seconds.\n")
