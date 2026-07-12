@@ -1,6 +1,5 @@
 import time
 
-start = time.perf_counter()
 alphabets = "abcdefghijklmnopqrstuvwxyz"
 digits = "0123456789"
 specials = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
@@ -8,6 +7,7 @@ words = ""
 
 phrase = input("Enter a phrase (ex. Hello, World!): ")
 
+start = time.perf_counter()
 for word in phrase:
     if word in alphabets:
         charset = alphabets
