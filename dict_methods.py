@@ -2,49 +2,49 @@ users = {0: "Mario", 1:"Luigi", 2:"James", 3:"Peach", 4:"Mushroom"}
 
 print(f"Original Dict: {users}")
 
-# keys()
+# 1. keys()
 print(f"\nKeys: {users.keys()}")
 
-# values()
+# 2. values()
 print(f"\nValues: {users.values()}")
 
-# pop()
+# 3. pop()
 popped = users.pop(0) # key
 print(f"\nPopped: {popped}\n{users}")
 
-# popitem()
+# 4. popitem()
 popped_item = users.popitem() # remove the last, returns a tuple
 print(f"\nPopped Item: {popped_item}\n{users}")
 
-# copy()
+# 5. copy()
 copied = users.copy() # shallow copy
 print(f"\nOriginal: {users}, ID: {id(users)}")
 print(f"Copied: {copied}, ID: {id(copied)}")
 
-# get()
+# 6. get()
 print(f"\nIf Exist: {users.get(1)}")
 print(f"If Not Exist: {users.get(5, "Not Found")}")
 print(f"Current Dict: {users}")
 
-# setdefault()
+# 7. setdefault()
 print(f"\nIf Exist: {users.setdefault(1, "???")}")
 print(f"If Not Exist: {users.setdefault(5, "???")}")
 print(f"Current Dict: {users}")
 
-# fromkeys()
+# 8. fromkeys()
 people = ["Mario", "Luigi", "James"]
 from_keys = dict.fromkeys(people, "???")
 print(f"\nFrom Keys: {from_keys}")
 
-# items()
+# 9. items()
 print(f"\nItems: {users.items()}\nFor Loop:")
 for key, value in users.items():
     print(f"{key}. {value}")
 
-# update()
+# 10. update()
 users.update({6:"New"})
 print(f"\nUpdated: {users}")
 
-# clear()
+# 11. clear()
 users.clear()
 print(f"\nCleared: {users}")
