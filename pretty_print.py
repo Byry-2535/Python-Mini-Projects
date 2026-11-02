@@ -1,3 +1,4 @@
+import os
 import time
 
 alphabets = "abcdefghijklmnopqrstuvwxyz"
@@ -25,6 +26,7 @@ for word in phrase:
             else:
                 print(words + char)
             time.sleep(.1)
+            os.system("cls")
 else:
     end = time.perf_counter()
-    print(f"\n{words}\n{end - start:.2f} seconds.\n")
+    print(f"{words}\n\n{end - start:.2f} seconds.")
